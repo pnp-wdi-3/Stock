@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  brand: MyString
+  type: 
+  quantity: 1
+  exp_date: 2019-03-10
+  price: 
+
+two:
+  name: MyString
+  brand: MyString
+  type: 
+  quantity: 1
+  exp_date: 2019-03-10
+  price: 
