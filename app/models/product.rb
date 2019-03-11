@@ -13,9 +13,12 @@ end
 
 def define_state
     if self.exp_date < Date.today
-       self.state = "expierd" 
+       self.state = "Expierd" 
+    elsif
+      self.exp_date - Date.today >=  0 &&  self.exp_date - Date.today < 3
+      self.state = "Almost expierd" 
     else
-        self.state = "new" 
+      self.state = "New" 
     end
   
   end

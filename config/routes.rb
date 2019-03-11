@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'states/expired'
+  get '/products/states/expired'
   get 'states/almost_exp'
   get 'states/good'
   devise_for :users , controllers: { registrations: "registrations" }
