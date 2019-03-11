@@ -15,7 +15,7 @@
  */
  
 /* pop up alert css */
-.Logoutalert {
+.notice {
   padding: 20px;
   background-color: #f44336;
   color: white;
@@ -35,6 +35,9 @@
 .closebtn:hover {
   color: black;
 }
+
+/* ||||||TABLE|||||  */
+
 /* nav bar */
 header{
   padding:0px;
@@ -70,7 +73,7 @@ header{
 }
 
 .hoverable:hover, .hoverable:active, .hoverable:focus{
-  color:#fff;
+  color:#feffff;
   transform: translateY(-5px);
 }
 .hoverable:hover:before, .hoverable:active:before, .hoverable:focus:before{
@@ -132,27 +135,30 @@ header{
 }
 
 body {
-  background-color: #3A4366;
+  background-color: #feffff;
   font-weight:600;
   text-align:center !important;
-  color: white;
+  color:  #daad86;
 }
 
 nav.a {
+
     display : inline !important;
-    color: white;
+    color: gray;
   background: none !important;
   text-transform:uppercase;
+  transition: 0.5s color ease-in-out;
+
   ul{
-     display : inline-block !important;
+     /* display : inline-block !important; */
   }
   li {
     
-       display : inline-block !important;
+       /* display : inline-block !important; */
    
    
-    a{
-      transition: .5s color ease-in-out;
+    li.a{
+      transition: 0.5s color ease-in-out;
     }
   }
 }
