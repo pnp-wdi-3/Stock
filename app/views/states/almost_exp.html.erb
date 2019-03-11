@@ -1,2 +1,14 @@
-<h1>States#almost_exp</h1>
-<p>Find me in app/views/states/almost_exp.html.erb</p>
+<% @exp_products.each do |product| %>
+    <tr>
+      <td><%= product.name %></td>
+      <td><%= product.brand %></td>
+      <td><%= product.category %></td>
+      <td><%= product.quantity %></td>
+      <td><%= product.exp_date %></td>
+      <td><%= product.price %></td>
+      <td><%= product.state %></td>
+      <td><%= link_to 'Show', product %></td>
+      <td><%= link_to 'Edit', edit_product_path(product) %></td>
+      <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
