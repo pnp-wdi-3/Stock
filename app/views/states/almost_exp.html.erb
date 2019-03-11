@@ -1,14 +1,39 @@
-<% @exp_products.each do |product| %>
-    <tr>
-      <td><%= product.name %></td>
-      <td><%= product.brand %></td>
-      <td><%= product.category %></td>
-      <td><%= product.quantity %></td>
-      <td><%= product.exp_date %></td>
-      <td><%= product.price %></td>
-      <td><%= product.state %></td>
-      <td><%= link_to 'Show', product %></td>
-      <td><%= link_to 'Edit', edit_product_path(product) %></td>
-      <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  <% end %>
+  <h1>Almost Expired Products</h1>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Brand</th>
+        <th>category</th>
+        <th>Quantity</th>
+        <th>Exp date</th>
+        <th>Price</th>
+        <th>State</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% @exp_products.each do |product| %>
+        <tr>
+          <td><%= product.name %></td>
+          <td><%= product.brand %></td>
+          <td><%= product.category %></td>
+          <td><%= product.quantity %></td>
+          <td><%= product.exp_date %></td>
+          <td><%= product.price %></td>
+          <td><%= product.state %></td>
+          <td><%= link_to 'Show', product %></td>
+          <td><%= link_to 'Edit', edit_product_path(product) %></td>
+          <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  
+  <br>
+  <%= link_to 'Back', products_path %>
+
+  
+  
