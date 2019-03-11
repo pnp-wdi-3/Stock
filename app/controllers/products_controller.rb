@@ -12,6 +12,19 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
   end
+  def sale
+    @product = Product.find(params[:id])
+    @qu = @product.quantity 
+    if @qu > 1
+    @product.update_attribute(:quantity, @qu -1)
+    # @product.quantity = @product.quantity - 1
+    @product.save!
+    redirect_to '/products'
+    else
+      redirect_to '/products'
+
+    end
+  end
 
   # GET /products/new
   def new
