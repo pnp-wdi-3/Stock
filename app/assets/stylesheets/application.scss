@@ -15,32 +15,15 @@
  */
  /*|| state Button || */
  
-  @import url(https://fonts.googleapis.com/css?family=Raleway:300);
 
   /* // Mixin below used to center the button. If using in production, remove the mixin and add position relative or absolute to button. */
   
-  @mixin center($extend: true) {
-      // @if $extend {
-      //     @extend %center;
-      // } @else {
-      //     position: absolute;
-      //     left: 50%;
-      //     top: 50%;
-      //     transform: translateX(-50%) translateY(-50%);
-      // }
-  }
-  
-  %center {
-      @include center($extend: false);
-  }
-  
-  
   .stateButton{
-    @include center;
+    position: relative;
     background: #333;
-    color: #ccc;
-    width: 200px;
-    height: 60px;
+    color: red;
+    width: 300px;
+    height: 30px;
     border: 0;
     font-size: 18px;
     border-radius: 4px;
@@ -99,7 +82,9 @@
 
 /* pop up alert css */
 .notice {
+margin: auto;
   padding: 20px;
+  width: 100px;
   background-color: #f44336;
   color: white;
 }
@@ -116,7 +101,7 @@
 }
 
 .closebtn:hover {
-  color: black;
+  color: rgb(255, 0, 0);
 }
 
 /* ||||||TABLE|||||  */
@@ -221,13 +206,13 @@ body {
   background-color: #feffff;
   font-weight:600;
   text-align:center !important;
-  color:  #daad86;
+  // color:  #daad86;
 }
 
 nav.a {
 
     display : inline !important;
-    color: gray;
+    color: pink;
   background: none !important;
   text-transform:uppercase;
   transition: 0.5s color ease-in-out;
