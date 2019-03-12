@@ -4,9 +4,9 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :brand
       t.string :category
-      t.integer :quantity
+      t.integer :quantity 
       t.date :exp_date
-      t.float :price
+      t.float :price, :default => 0
 
       t.timestamps
     end
