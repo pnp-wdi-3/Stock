@@ -1,7 +1,8 @@
 body {
+
   background-color: #fff;
   color: #333;
-  margin: 33px;
+  margin: 0px;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -20,17 +21,19 @@ pre {
 }
 
 a {
-  color: #000;
-
-  &:visited {
-    color: #666;
-  }
-
-  &:hover {
-    color: #fff;
-    background-color: #000;
-  }
+  padding-right: 30px;
+  text-decoration: none;
+  color: #fff8;
 }
+//   &:visited {
+//     color: #666;
+//   }
+
+//   &:hover {
+//     color: #fff;
+//     background-color: #000;
+//   }
+// }
 
 th {
   padding-bottom: 5px;
@@ -70,15 +73,26 @@ div {
     font-size: 12px;
     margin: -7px -7px 0;
     background-color: #c00;
-    color: #fff;
+    color: gray;
   }
 
-  ul li {
+li {
+  
     font-size: 12px;
     list-style: square;
+  //  margin:3px;
+  //  padding:5px;
+   display: inline;
+   padding-right: 30px;
   }
+
+}
+ul{
+  // display:inline-block
+  display:flex;
+  list-style: none;
 }
 
 label {
-  display: block;
+  // display: block;
 }

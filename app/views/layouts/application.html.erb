@@ -5,17 +5,30 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
   </head>
-
+<header>
+<%# <div class="container-fluid"> %>
+  <nav class="navbar navbar-inverse">
+    <%# <div class="container-fluid"> %>
+      <ul class="nav navbar-nav">
+        <li><a id="len1"  class="hoverable" href="#">Home</a></li>
+        <li><a id="len2"  class="hoverable" href="#">About</a></li>
+        <li><a id="len4" class="hoverable" href="#">Portfolio</a></li>
+        <li id="len3"  class="hoverable" ><% if user_signed_in? %><%= link_to 'logout', destroy_user_session_path, method: :delete %><% end %>
+</a></li>
+      </ul>
+    <%# </div> %>
+  </nav>
+<%# </div> %>
+  </header>
   <body>
-  <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+  
+  <p class="notice"><%= notice %> <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+ </p>
+       <p class="Logoutalert"><%= alert %></p>
 
-       <% if user_signed_in? %>
-       <%= link_to 'logout', destroy_user_session_path, method: :delete %>
-       <% end %>
 
     <%= yield %>
   </body>
