@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2019_03_11_092436) do
     t.string "category"
     t.integer "quantity"
     t.date "exp_date"
-    t.float "price", default: 0.0
+    t.float "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
