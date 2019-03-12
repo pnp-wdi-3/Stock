@@ -1,9 +1,14 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#ProductsTitle{
+	color: #2e3830;
+	
+}
+
 body {
-	background: #fafafa ;
-	color: #444;
+	background: #e6dbc9 ;
+	color: #e6dbc9; 
 	font: 100%/30px 'Helvetica Neue', helvetica, arial, sans-serif;
 	// text-shadow: 0 1px 0 #fff;
 }
@@ -17,9 +22,9 @@ em {
 }
 
 table {
-	background: #f5f5f5;
+	background: #2e3830;
 	border-collapse: separate;//?
-	box-shadow: inset 0 1px 0 #fff;//?
+	// box-shadow: inset 0 1px 0 #fff;//?
 	font-size: 12px;
 	line-height: 9px;
 	margin: 30px auto;
@@ -28,20 +33,21 @@ table {
 }	
 
 th {
-	background: #daad86 ;
+	background: #c53211 ;
 	// border-left: 1px solid #555;
 	// border-right: 1px solid #777;
 	// border-top: 1px solid #555;
 	// border-bottom: 1px solid #333;
 	// box-shadow: inset 0 1px 0 #999;
-	color: #312c32;
+	color: #2e3830;
   font-weight: bold;
 	padding: 10px 10px;
+	margin: 5px;
 	position: relative;
 }
 
 th:after {
-	background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.08));
+	// background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.08));
 	content: '';
 	display: block;
 	height: 25%;
@@ -53,12 +59,12 @@ th:after {
 }
 
 th:first-child {
-	border-left: 1px solid #777;	
-	box-shadow: inset 1px 1px 0 #999;
+	// border-left: 1px solid #777;	
+	// box-shadow: inset 1px 1px 0 #999;
 }
 
 th:last-child {
-	box-shadow: inset -1px 1px 0 #999;
+	// box-shadow: inset -1px 1px 0 #999;
 }
 
 td {
@@ -72,32 +78,32 @@ td {
 }
 
 td:first-child {
-	box-shadow: inset 1px 0 0 #fff;
+	// box-shadow: inset 1px 0 0 #fff;
 }	
 
 td:last-child {
 	// border-right: 1px solid #e8e8e8;
-	box-shadow: inset -1px 0 0 #fff;
+	// box-shadow: inset -1px 0 0 #fff;
 }	
 
 tr {
-	background: url(https://jackrugile.com/images/misc/noise-diagonal.png);	
+	// background: url(https://jackrugile.com/images/misc/noise-diagonal.png);	
 }
 
-tr:nth-child(odd) td {
-	background: #f1f1f1 url(https://jackrugile.com/images/misc/noise-diagonal.png);	
+ td {
+	background: #2e3830 
 }
 
 tr:last-of-type td {
-	box-shadow: inset 0 -1px 0 #fff; 
+	// box-shadow: inset 0 -1px 0 #fff; 
 }
 
 tr:last-of-type td:first-child {
-	box-shadow: inset 1px -1px 0 #fff;
+	// box-shadow: inset 1px -1px 0 #fff;
 }	
 
 tr:last-of-type td:last-child {
-	box-shadow: inset -1px -1px 0 #fff;
+	// box-shadow: inset -1px -1px 0 #fff;
 }	
 
 tbody:hover td {
@@ -106,6 +112,9 @@ tbody:hover td {
 }
 
 tbody:hover tr:hover td {
-	color: #444;
-	text-shadow: 0 1px 0 #fff;
+	color: #fcf2e4;
+	text-shadow: 0 0px 6px #e6dbc9;
+}
+.actionTable{
+	color: #c53211 !important;
 }

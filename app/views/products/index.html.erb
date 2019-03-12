@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<button class="stateButton"><%= link_to 'Good Product', states_good_path %></button>
-<button class="stateButton"><%= link_to 'Almost Expired Product', states_almost_exp_path %></button>
-<button class="stateButton"><%= link_to 'Expired Product', states_expired_path %></button>
+<button id="state1" class="stateButton"><%= link_to '', states_good_path %>Good Product</button>
+<button id="state2"  class="stateButton"><%= link_to '', states_almost_exp_path %>Almost Expired Product</button>
+<button id="state3"  class="stateButton"><%= link_to '', states_expired_path %>Expired Product</button>
 
-<h1>Products</h1>
+<h1 id="ProductsTitle">Products</h1>
 
 <table>
   <thead>
@@ -17,7 +17,7 @@
       <th>Price</th>
       <th>State</th>
       <th>Show</th>
-      <th>Sale</th>
+      <th>Sell</th>
       <th>Edit</th>
       <th>Delete</th>
       <th colspan="3"></th>
@@ -34,10 +34,10 @@
         <td><%= product.exp_date %></td>
         <td><%= product.price %></td>
         <td><%= product.state %></td>
-        <td><%= link_to  image_tag("show-30x30.png", class: "img-responsive"), product %></td>
-        <td><%= link_to 'Sale', sale_path(product), method: :patch %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="actionTable"><%= link_to  image_tag("show-30x30.png", class: "img-responsive"), product %></td>
+        <td class="actionTable"><%= link_to 'Sell', sale_path(product), method: :patch %></td>
+        <td class="actionTable"><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td class="actionTable"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -45,4 +45,4 @@
 
 <br>
 
-<%= link_to 'New Product', new_product_path %>
+<button class="stateButton"><%= link_to 'New Product', new_product_path %> </button>
