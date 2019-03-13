@@ -43,36 +43,30 @@ class ProductsController < ApplicationController
   def create
     @brunch = Brunch.find(params[:brunch_id])
     @product = @brunch.products.build(product_params)
-    @product.save!
-    # @product = Product.new(product_params)
-
-    # respond_to do |format|
-    #   if @product.save
-    #     format.html { redirect_to @product, notice: 'Product was successfully created.' }
-    #     format.json { render :show, status: :created, location: @product }
-    #   else
-    #     format.html { render :new }
-    #     format.json { render json: @product.errors, status: :unprocessable_entity }
-    #   end
-    # end
-    redirect_to brunch_path(params[:brunch_id])
+    respond_to do |format|
+      if @product.save
+        format.html { redirect_to brunch_path(params[:brunch_id]), notice: 'Product was successfully created.' }
+        format.json { render :show, status: :created, location: @product }
+      else
+        format.html { render :new }
+        format.json { render json: @product.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json
   def update
-    @product.update(product_params)
-    # respond_to do |format|
-    #   if @product.update(product_params)
-    #     format.html { redirect_to @product, notice: 'Product was successfully updated.' }
-    #     format.json { render :show, status: :ok, location: @product }
-    #   else
-    #     format.html { render :edit }
-    #     format.json { render json: @product.errors, status: :unprocessable_entity }
-    #   end
-    # end
+    respond_to do |format|
+      if @product.update(product_params)
+        format.html { redirect_to brunch_path(params[:brunch_id]), notice: 'Product was successfully updated.' }
+        format.json { render :show, status: :ok, location: @product }
+      else
+        format.html { render :edit }
+        format.json { render json: @product.errors, status: :unprocessable_entity }
+      end
+    end
 
-        redirect_to brunch_path(params[:brunch_id])
 
   end
 
