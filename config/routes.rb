@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :brunches do 
     # patch 'brunches/:id/products' => "products#update"
   resources :products
-  patch '/products/sell', to: "products#sale", as: 'sale'
+ patch '/products/:id/sell', to: "products#sale", as: 'sale'
   get '/states/expired', to: "states#expired"
   get '/states/almost_exp', to: "states#almost_exp"
   get '/states/good', to: "states#good"

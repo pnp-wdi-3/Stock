@@ -28,12 +28,18 @@
 .notice {
   display: none;
   margin: auto;
-    padding: 20px;
+    padding: 0px;
     width: 100px;
     background-color: #4b6777;
     color: white;
   }
-  
+  .logo{
+    margin-top:10px; 
+    position: relative;
+    height: 50px;
+    right:600px;
+    bottom: 75px;
+  }
   .closebtn {
     margin-left: 15px;
     color: white;
@@ -52,10 +58,10 @@
   /* ||||||TABLE|||||  */
   
   /* nav bar */
-  header{
-    padding:0px;
-     background: #2e3830;
-  }
+  // header{
+  //   padding:0px;
+  //    background: #2e3830;
+  // }
   .hoverable{
     /* padding-right: 70px; */
     display:inline-block;
@@ -66,6 +72,7 @@
     transform: translateZ(0);
     transition-duration: .3s;
     transition-property:transform;
+    margin-bottom:12px;
   }
   
   .hoverable:before{
@@ -149,7 +156,7 @@
   }
   
   header{
-    background: #4b6777;
+    background: #2c2c2c;
     box-shadow: 0px 4px 5px 0px black;
   }
   
@@ -188,6 +195,6 @@
   }
   
   
-  .actions{
-    background: red;
-  }
+  // .actions{
+  //   background: red;
+  // }

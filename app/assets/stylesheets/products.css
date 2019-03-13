@@ -1,7 +1,7 @@
 body{background:#fafafa;color:#444;font:100%/30px 'Helvetica Neue', helvetica, arial, sans-serif}
 em{font-style:italic}
 table{font-size:12px;line-height:9px;margin:30px auto;text-align:center;width:600px}
-th{color:#4b6777;font-weight:bold;padding:10px 10px;position:relative}
+th{color:#2c2c2c;font-weight:bold;padding:10px 10px;position:relative;background-color:#d9dfe2}
 th:after{background:linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0.08));
     content:'';display:block;
     height:25%;

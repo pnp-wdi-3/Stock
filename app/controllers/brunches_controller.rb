@@ -29,7 +29,7 @@ class BrunchesController < ApplicationController
 
     respond_to do |format|
       if @brunch.save
-        format.html { redirect_to @brunch, notice: 'Brunch was successfully created.' }
+        format.html { redirect_to @brunch }
         format.json { render :show, status: :created, location: @brunch }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class BrunchesController < ApplicationController
   def update
     respond_to do |format|
       if @brunch.update(brunch_params)
-        format.html { redirect_to @brunch, notice: 'Brunch was successfully updated.' }
+        format.html { redirect_to @brunch }
         format.json { render :show, status: :ok, location: @brunch }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class BrunchesController < ApplicationController
   def destroy
     @brunch.destroy
     respond_to do |format|
-      format.html { redirect_to brunches_url, notice: 'Brunch was successfully destroyed.' }
+      format.html { redirect_to brunches_url }
       format.json { head :no_content }
     end
   end

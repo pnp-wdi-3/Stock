@@ -2,3 +2,28 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// image_tag("show-30x30.png", class: "img-responsive")
+
+h6{
+   animation-name: pen;
+ animation-duration: 4s;
+}
+
+.custom-logo{
+   animation-name: pen;
+   animation-duration: 4s;
+   padding-top:180px; 
+ 
+  }
+
+@keyframes pen {
+
+   0%   { left:800px; }
+   25%  {left:700px; }
+   35%  {left:600px; }
+    50%  {left:500px; }
+    60%  {left:400px; }
+   75%  { left:300px; }
+   85%  { left:200px; }
+   100% { left:000px}
+  }
