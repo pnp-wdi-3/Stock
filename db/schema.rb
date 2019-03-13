@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_11_092436) do
+ActiveRecord::Schema.define(version: 2019_03_13_073620) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "brunches", force: :cascade do |t|
+    t.string "name"
+    t.string "city"
+    t.string "address"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_brunches_on_user_id"
+  end
 
   create_table "products", force: :cascade do |t|
     t.string "name"
@@ -21,12 +31,12 @@ ActiveRecord::Schema.define(version: 2019_03_11_092436) do
     t.string "category"
     t.integer "quantity"
     t.date "exp_date"
-    t.float "price"
+    t.float "price", default: 0.0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id"
+    t.bigint "brunch_id"
     t.string "state"
-    t.index ["user_id"], name: "index_products_on_user_id"
+    t.index ["brunch_id"], name: "index_products_on_brunch_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -41,5 +51,6 @@ ActiveRecord::Schema.define(version: 2019_03_11_092436) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "products", "users"
+  add_foreign_key "brunches", "users"
+  add_foreign_key "products", "users", column: "brunch_id"
 end

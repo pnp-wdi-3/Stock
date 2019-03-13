@@ -1,12 +1,13 @@
 class Product < ApplicationRecord
-    belongs_to :user
+    belongs_to :brunch
     validates :name , :brand , :category ,:quantity , :exp_date, :price , presence: true
-    validates :quantity, numericality: {greater_than_or_equal_to: 0 }
+    validates :quantity, numericality: {greater_than_or_equal_to: 0}
     validates :price, format: { with: /\A\d+(?:\.\d{0,2})?\z/}, numericality: {greater_than_or_equal_to: 0 }
 
     before_save :calculate_receipt_tax
     # after_save :calculate_receipt_tax
     before_save :define_state
+    before_save :define_Q
 
 def calculate_receipt_tax
   if new_record? || price_changed?
@@ -28,7 +29,14 @@ def define_state
     else
       self.state = "New" 
     end
+
   
+  end
+
+  def define_Q
+    if self.quantity == 0
+      self.state = "Out of stock!" 
+    end
   end
 
 
