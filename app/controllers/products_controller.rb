@@ -5,7 +5,8 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = current_user.products
+    # @brunche = Brunch.find(params[:brunch_id])
+    # @products = .products
   end
 
   # GET /products/1
@@ -13,15 +14,16 @@ class ProductsController < ApplicationController
   def show
   end
   def sale
-    @product = Product.find(params[:id])
+    @brunch = Brunch.find(params[:brunch_id])
+    @product = @brunch.products.find(params[:id])
     @qu = @product.quantity 
-    if @qu > 1
+    if @qu > 0
     @product.update_attribute(:quantity, @qu -1)
     # @product.quantity = @product.quantity - 1
     @product.save!
-    redirect_to '/products'
+    redirect_to brunch_path(params[:brunch_id])
     else
-      redirect_to '/products'
+      redirect_to brunch_path(params[:brunch_id])
 
     end
     # @product.quantity = @product.quantity 
@@ -39,43 +41,51 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
-    @product = current_user.products.build(product_params)
-
+    @brunch = Brunch.find(params[:brunch_id])
+    @product = @brunch.products.build(product_params)
+    @product.save!
     # @product = Product.new(product_params)
 
-    respond_to do |format|
-      if @product.save
-        format.html { redirect_to @product, notice: 'Product was successfully created.' }
-        format.json { render :show, status: :created, location: @product }
-      else
-        format.html { render :new }
-        format.json { render json: @product.errors, status: :unprocessable_entity }
-      end
-    end
+    # respond_to do |format|
+    #   if @product.save
+    #     format.html { redirect_to @product, notice: 'Product was successfully created.' }
+    #     format.json { render :show, status: :created, location: @product }
+    #   else
+    #     format.html { render :new }
+    #     format.json { render json: @product.errors, status: :unprocessable_entity }
+    #   end
+    # end
+    redirect_to brunch_path(params[:brunch_id])
   end
 
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json
   def update
-    respond_to do |format|
-      if @product.update(product_params)
-        format.html { redirect_to @product, notice: 'Product was successfully updated.' }
-        format.json { render :show, status: :ok, location: @product }
-      else
-        format.html { render :edit }
-        format.json { render json: @product.errors, status: :unprocessable_entity }
-      end
-    end
+    @product.update(product_params)
+    # respond_to do |format|
+    #   if @product.update(product_params)
+    #     format.html { redirect_to @product, notice: 'Product was successfully updated.' }
+    #     format.json { render :show, status: :ok, location: @product }
+    #   else
+    #     format.html { render :edit }
+    #     format.json { render json: @product.errors, status: :unprocessable_entity }
+    #   end
+    # end
+
+        redirect_to brunch_path(params[:brunch_id])
+
   end
 
   # DELETE /products/1
   # DELETE /products/1.json
   def destroy
     @product.destroy
-    respond_to do |format|
-      format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    # respond_to do |format|
+    #   format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
+    #   format.json { head :no_content }
+    # end
+    redirect_to brunch_path(params[:brunch_id])
+
   end
   
 

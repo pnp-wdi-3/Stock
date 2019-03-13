@@ -1,6 +1,6 @@
 <h1>Editing Product</h1>
 
-<%= render 'form', product: @product %>
+<%= render 'form', url: brunch_product_path(params[:brunch_id],@product.id), product: @product %>
 
-<%= link_to 'Show', @product %> |
-<%= link_to 'Back', products_path %>
+<%= link_to 'Show', brunch_product_path(params[:brunch_id], @product ) %> |
+<%= link_to 'Back', brunch_path(params[:brunch_id]) %>
