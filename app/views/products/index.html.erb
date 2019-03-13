@@ -34,10 +34,10 @@
         <td><%= product.exp_date %></td>
         <td><%= product.price %></td>
         <td><%= product.state %></td>
-        <td class="actionTable"><%= link_to  image_tag("show-30x30.png", class: "img-responsive"), product %></td>
-        <td class="actionTable"><%= link_to 'Sell', sale_path(product), method: :patch %></td>
-        <td class="actionTable"><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td class="actionTable"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="actionTable"><%= link_to  image_tag("show-30x30.png", class: "img-responsive"), product%></td>
+        <td class="actionTable"><%= link_to '', sale_path(product), method: :patch %>Sell</td>
+        <td class="actionTable"><%= link_to '', edit_product_path(product) %>Edit</td>
+        <td class="actionTable"><%= link_to '', product, method: :delete, data: { confirm: 'Are you sure?' }%>Destroy</td>
       </tr>
     <% end %>
   </tbody>
