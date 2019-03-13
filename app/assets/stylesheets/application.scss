@@ -26,10 +26,11 @@
 
 /* pop up alert css */
 .notice {
+  display: none;
   margin: auto;
     padding: 20px;
     width: 100px;
-    background-color: #f44336;
+    background-color: #4b6777;
     color: white;
   }
   
@@ -148,12 +149,13 @@
   }
   
   header{
+    background: #4b6777;
     box-shadow: 0px 4px 5px 0px black;
   }
   
   
   body {
-    background-color: #e6dbc9;
+    background-color: #f5f1f2;
     font-weight:600;
     text-align:center !important;
     // color:  #daad86;
