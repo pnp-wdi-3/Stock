@@ -15,239 +15,177 @@
  */
  /*|| state Button || */
  
-  @import url(https://fonts.googleapis.com/css?family=Raleway:300);
 
   /* // Mixin below used to center the button. If using in production, remove the mixin and add position relative or absolute to button. */
   
-  @mixin center($extend: true) {
-      // @if $extend {
-      //     @extend %center;
-      // } @else {
-      //     position: absolute;
-      //     left: 50%;
-      //     top: 50%;
-      //     transform: translateX(-50%) translateY(-50%);
-      // }
-  }
-  
-  %center {
-      @include center($extend: false);
-  }
-  
-  
-  .stateButton{
-    @include center;
-    background: #333;
-    color: #ccc;
-    width: 200px;
-    height: 60px;
-    border: 0;
-    font-size: 18px;
-    border-radius: 4px;
-    font-family: 'Raleway', sans-serif;
-    transition: .6s;
-    overflow: hidden;
-    &:focus{
-      outline: 0;
-    }
-    &:before{
-      content: '';
-      display: block;
-      position: absolute;
-      background: rgba(255,255,255,0.5);
-      width: 60px;
-      height: 100%;
-      left: 0;
-      top: 0;
-      opacity: .5;
-      filter: blur(30px);
-      transform: translateX(-100px)  skewX(-15deg);
-    }
-    &:after{
-      content: '';
-      display: block;
-      position: absolute;
-      background: rgba(255,255,255,0.2);
-      width: 30px;
-      height: 100%;
-      left: 30px;
-      top: 0;
-      opacity: 0;
-      filter: blur(5px);
-      transform: translateX(-100px) skewX(-15deg);
-    }
-    &:hover{
-      background: #338033;
-      cursor: pointer;
-      &:before{
-        transform: translateX(300px)  skewX(-15deg);  
-        opacity: 0.6;
-        transition: .7s;
-      }
-      &:after{
-        transform: translateX(300px) skewX(-15deg);  
-        opacity: 1;
-        transition: .7s;
-      }
-    }
-  }
    /* color: #312c32 !important;
    background: #98dafc;
 
- } */
+ */
 
 
 /* pop up alert css */
 .notice {
-  padding: 20px;
-  background-color: #f44336;
-  color: white;
-}
-
-.closebtn {
-  margin-left: 15px;
-  color: white;
-  font-weight: bold;
-  float: right;
-  font-size: 22px;
-  line-height: 20px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.closebtn:hover {
-  color: black;
-}
-
-/* ||||||TABLE|||||  */
-
-/* nav bar */
-header{
-  padding:0px;
-   background: black;
-}
-.hoverable{
-  /* padding-right: 70px; */
-  display:inline-block;
-  backface-visibility: hidden;
-  vertical-align: middle;
-  position:relative;
-  box-shadow: 0 0 1px rgba(0,0,0,0);
-  tranform: translateZ(0);
-  transition-duration: .3s;
-  transition-property:transform;
-}
-
-.hoverable:before{
-  position:absolute;
-  pointer-events: none;
-  z-index:-1;
-  content: '';
-  top: 100%;
-  left: 5%;
-  height:10px;
-  width:90%;
-  opacity:0;
-  background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
-  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
-  /* W3C */
-  transition-duration: 0.3s;
-  transition-property: transform, opacity;
-}
-
-.hoverable:hover, .hoverable:active, .hoverable:focus{
-  color:#feffff;
-  transform: translateY(-5px);
-}
-.hoverable:hover:before, .hoverable:active:before, .hoverable:focus:before{
-  opacity: 1;
-  transform: translateY(-5px);
-}
-
-
-
-@keyframes bounce-animation {
-  16.65% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px);
+  margin: auto;
+    padding: 20px;
+    width: 100px;
+    background-color: #f44336;
+    color: white;
   }
-
-  33.3% {
-    -webkit-transform: translateY(-6px);
-    transform: translateY(-6px);
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
   }
-
-  49.95% {
-    -webkit-transform: translateY(4px);
-    transform: translateY(4px);
+  
+  .closebtn:hover {
+    color: rgb(255, 0, 0);
   }
-
-  66.6% {
-    -webkit-transform: translateY(-2px);
-    transform: translateY(-2px);
+  
+  /* ||||||TABLE|||||  */
+  
+  /* nav bar */
+  header{
+    padding:0px;
+     background: #2e3830;
   }
-
-  83.25% {
-    -webkit-transform: translateY(1px);
-    transform: translateY(1px);
+  .hoverable{
+    /* padding-right: 70px; */
+    display:inline-block;
+    backface-visibility: hidden;
+    vertical-align: middle;
+    position:relative;
+    box-shadow: 0 0 1px rgba(0,0,0,0);
+    transform: translateZ(0);
+    transition-duration: .3s;
+    transition-property:transform;
   }
-
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+  
+  .hoverable:before{
+    position:absolute;
+    pointer-events: none;
+    z-index:-1;
+    content: '';
+    top: 100%;
+    left: 5%;
+    height:10px;
+    width:90%;
+    opacity:0;
+    background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+    /* W3C */
+    transition-duration: 0.3s;
+    transition-property: transform, opacity;
   }
-}
-
-.bounce {
-  animation-name: bounce-animation;
-  animation-duration: 2s;
-}
-
-
-
-/*everything below here is just setting up the page, so dont worry about it */
-
-
-@media (min-width: 768px) {
-  .navbar{
-
-    text-align: center !important;
-    float: none;
-    display: inline-block;
+  
+  .hoverable:hover, .hoverable:active, .hoverable:focus{
+    color:#feffff;
+    transform: translateY(-5px);
   }
-}
-
-body {
-  background-color: #feffff;
-  font-weight:600;
-  text-align:center !important;
-  color:  #daad86;
-}
-
-nav.a {
-
-    display : inline !important;
-    color: gray;
-  background: none !important;
-  text-transform:uppercase;
-  transition: 0.5s color ease-in-out;
-
-  ul{
-     /* display : inline-block !important; */
+  .hoverable:hover:before, .hoverable:active:before, .hoverable:focus:before{
+    opacity: 1;
+    transform: translateY(-5px);
   }
-  li {
-    
-       /* display : inline-block !important; */
-   
-   
-    li.a{
-      transition: 0.5s color ease-in-out;
+  
+  
+  
+  @keyframes bounce-animation {
+    16.65% {
+      -webkit-transform: translateY(8px);
+      transform: translateY(8px);
+    }
+  
+    33.3% {
+      -webkit-transform: translateY(-6px);
+      transform: translateY(-6px);
+    }
+  
+    49.95% {
+      -webkit-transform: translateY(4px);
+      transform: translateY(4px);
+    }
+  
+    66.6% {
+      -webkit-transform: translateY(-2px);
+      transform: translateY(-2px);
+    }
+  
+    83.25% {
+      -webkit-transform: translateY(1px);
+      transform: translateY(1px);
+    }
+  
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
     }
   }
-}
-
-.page-title {
-  opacity: .75 !important;
-}
-
-
+  
+  .bounce {
+    animation-name: bounce-animation;
+    animation-duration: 2s;
+  }
+  
+  
+  
+  /*everything below here is just setting up the page, so dont worry about it */
+  
+  
+  @media (min-width: 768px) {
+    .navbar{
+      text-align: center !important;
+      float: none;
+      display: inline-block;
+      text-shadow: 0 1px 4px #2e3830;
+  
+    }
+  }
+  
+  header{
+    box-shadow: 0px 4px 5px 0px black;
+  }
+  
+  
+  body {
+    background-color: #e6dbc9;
+    font-weight:600;
+    text-align:center !important;
+    // color:  #daad86;
+  }
+  
+  nav.a {
+  
+      display : inline !important;
+      color: pink;
+    background: none !important;
+    text-transform:uppercase;
+    transition: 0.5s color ease-in-out;
+  
+    ul{
+       /* display : inline-block !important; */
+    }
+    li {
+      
+         /* display : inline-block !important; */
+     
+     
+      li.a{
+        transition: 0.5s color ease-in-out;
+      }
+    }
+  }
+  
+  .page-title {
+    opacity: .75 !important;
+  }
+  
+  
+  .actions{
+    background: red;
+  }

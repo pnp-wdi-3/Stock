@@ -1,6 +1,9 @@
 class StatesController < ApplicationController
+
   def expired
-    @exp_products = current_user.products.where(state: "Expierd")
+    @brunch = current_user.brunches.find(params[:id])
+
+    @exp_products = @brunch.products.where(state: "Expierd")
   end
 
   def almost_exp
