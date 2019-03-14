@@ -48,10 +48,9 @@ https://github.com/pnp-wdi-3/Stock_Market
 
 
 ## futuer plan : <br>
-- add new fetuers for our project pop up window for product page . <br>
-- add new style for the hole website . <br>
-- and solve all pugs in our project . <br>
-- add parcode fethier to add goods in the system <br>
-- GPC location feathcrs for each branch <br>
-- share with the thrid part to managment the pre expried product <br>
-
+- Add new featuor for our project pop up window for product page . <br>
+- Add new style for the hole website . <br>
+- And solve all pugs in our project . <br>
+- Add parcode reader  to add goods in the system . <br>
+- GPC location featuor for each branch <br>
+- Share with the thrid part to managment the pre expired product . <br>
