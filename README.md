@@ -1,4 +1,3 @@
-# README
 
 #PNP Mini Market :
 
