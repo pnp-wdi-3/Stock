@@ -1,15 +1,21 @@
-<div class="container">
-<h1 >Welcome to Stock market</h2>
 
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+
+<div class="container">
+<h3 >Welcome to Stock market</h3>
+
+  <br>
   
 
       <%= link_to  new_user_session_path do %>
-       <button class="login-btn"> Log in </button>
+       <button class="stateButton"> Log in </button>
      <% end %>
       <%= link_to  new_user_registration_path do %>
-       <button class="login-btn"> Sign up </button>
+       <button class="stateButton"> Sign up </button>
      <% end %> <br>
       <%= image_tag "logo.png", :class => "custom-logo"%>
-  
+      <br>
+  <br>
+      <small> &copy; PNP Market</small>
 
 </div>
