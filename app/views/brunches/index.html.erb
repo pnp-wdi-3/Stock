@@ -18,9 +18,9 @@
         <td><%= brunch.name %></td>
         <td><%= brunch.city %></td>
         <td><%= brunch.address %></td>
-        <td><%= link_to 'Show', brunch %></td>
-        <td><%= link_to 'Edit', edit_brunch_path(brunch) %></td>
-        <td><%= link_to 'Destroy', brunch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td id="link"><%= link_to 'Show', brunch %></td>
+        <td id="link1"><%= link_to 'Edit', edit_brunch_path(brunch) %></td>
+        <td id="link2"><%= link_to 'Destroy', brunch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

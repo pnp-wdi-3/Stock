@@ -1,3 +1,60 @@
 // Place all the styles related to the states controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.stateButton{
+  color:white;
+    position: relative;
+    background: #2c2c2c;
+    color:#c0b7a8 !important;
+    width: 300px;
+    height: 30px;
+    border: 0;
+    font-size: 18px;
+    border-radius: 4px;
+    font-family: 'Raleway', sans-serif;
+    transition: .6s;
+    overflow: hidden;
+    &:focus{
+      outline: 0;
+    }
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      background: rgba(255,255,255,0.5);
+      width: 60px;
+      height: 100%;
+      left: 0;
+      top: 0;
+      opacity: .5;
+      filter: blur(30px);
+      transform: translateX(-100px)  skewX(-15deg);
+    }
+    &:after{
+      content: '';
+      display: block;
+      position: absolute;
+      background: rgba(255,255,255,0.2);
+      width: 30px;
+      height: 100%;
+      left: 30px;
+      top: 0;
+      opacity: 0;
+      filter: blur(5px);
+      transform: translateX(-100px) skewX(-15deg);
+    }
+    &:hover{
+      background: #dbcab5;
+      cursor: pointer;
+      &:before{
+        transform: translateX(300px)  skewX(-15deg);  
+        opacity: 0.6;
+        transition: .7s;
+      }
+      &:after{
+        transform: translateX(300px) skewX(-15deg);  
+        opacity: 1;
+        transition: .7s;
+      }
+    }
+  }

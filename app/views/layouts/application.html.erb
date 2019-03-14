@@ -8,7 +8,7 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
-<header>
+<header>  
 <%# <div class="container-fluid"> %>
   <nav class="navbar navbar-inverse">
     <%# <div class="container-fluid"> %>
@@ -25,10 +25,12 @@
   </header>
   <body>
   
-       <p class="notice"><%= notice %> </p>
+       <p ><%= notice %> </p>
        <p class="Logoutalert"><%= alert %></p>
+       <%= image_tag "small@300x", :class => "logo"%>
 
-
+      
     <%= yield %>
+   
   </body>
 </html>
